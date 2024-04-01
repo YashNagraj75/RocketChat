@@ -1,0 +1,16 @@
+{
+    "id": "3a3fcc6d-8253-4a4f-b695-02293b836b06",
+    "version": "0.0.1",
+    "requiredApiVersion": "^1.19.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Yash",
+        "homepage": "google.com",
+        "support": "support.google.com"
+    },
+    "name": "hello world",
+    "nameSlug": "hello-world",
+    "classFile": "HelloWorldApp.ts",
+    "description": "simple app",
+    "implements": []
+}
