@@ -10,8 +10,9 @@ import {
     SlashCommandContext,
 } from '@rocket.chat/apps-engine/definition/slashcommands';
 
-import fetch from 'node-fetch';
+import * as dotenv from 'dotenv';
 
+dotenv.config();
 
 export class Gifcmd implements ISlashCommand {
     public command = 'gif';
@@ -39,17 +40,9 @@ export class Gifcmd implements ISlashCommand {
             ]
         };
 
-        // const response = await fetch("https://api.gooey.ai/v2/DeforumSD/", {
-        //     method: "POST",
-        //     headers: {
-        //     "Authorization": "Bearer sk-BAuNHahdHwYs0rJC0jzbEb845byIE5Heezko0tZsWoZ6SATm",
-        //     "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify(payload),
-        // });
         const response = await http.post("https://api.gooey.ai/v2/DeforumSD/", {
             headers: {
-                "Authorization": "Bearer sk-BAuNHahdHwYs0rJC0jzbEb845byIE5Heezko0tZsWoZ6SATm",
+                "Authorization": `Bearer ${process.env.GOOEY_API_KEY}`,
                 "Content-Type": "application/json",
             },
             data: payload,
