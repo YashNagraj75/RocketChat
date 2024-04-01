@@ -1,5 +1,6 @@
 # ignore modules pulled in from npm
 node_modules/
+.env
 
 # rc-apps package output
 dist/
@@ -27,5 +28,4 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Windows
-.env
+
